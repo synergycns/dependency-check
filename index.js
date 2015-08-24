@@ -109,9 +109,11 @@ function parse (opts, cb) {
   })
 
   function getDeps (file, basedir, callback) {
+    /*
     if (IS_NOT_RELATIVE.test(file)) {
       return callback(null)
     }
+    */
 
     if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) {
       var filename = './' + path.basename(file)
